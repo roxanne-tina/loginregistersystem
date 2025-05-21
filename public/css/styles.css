@@ -1,0 +1,265 @@
+:root {
+  --primary-color: #a5b9f3;
+  --secondary-color: #f8f9fc;
+  --text-color: #5a5c69;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--secondary-color) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgb(252, 245, 236);
+  border-radius: 10px;
+  box-shadow: 0 0 30px var(--shadow-color);
+  overflow: hidden;
+  transform: translateY(20px);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-body {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.25);
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #375ad3;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-register {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #36b9cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-register:hover {
+  background-color: #375ad3;
+  transform: translateY(-2px);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #375ad3;
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-title {
+  margin-bottom: 30px;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Responsive style*/
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .form-body {
+    padding: 20px;
+  }
+  
+  .form-header h1 {
+    font-size: 24px;
+  }
+  
+  .home-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive style tablet version */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  
+  .form-header h1 {
+    font-size: 26px;
+  }
+}
+
+/* Landscape*/
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    max-width: 90%;
+  }
+  
+  .form-body {
+    padding: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-header {
+    padding: 10px;
+  }
+  
+  .form-header h1 {
+    font-size: 20px;
+  }
+}
+
+/* Touch-friendly*/
+@media (hover: none) {
+  .btn:hover {
+    transform: none;
+  }
+  
+  .form-control, .btn {
+    font-size: 16px; 
+  }
+  
+  
+  .link, .forgot-password a {
+    padding: 8px 0;
+    display: inline-block;
+  }
+}
+

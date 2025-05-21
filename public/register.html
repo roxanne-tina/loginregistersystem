@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Register</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <h1>Register</h1>
+    </div>
+    <div class="form-body">
+      <div id="alert-container"></div>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <p class="text-center mt-3">
+        Already have an account? <a href="/login" class="link">Login</a>
+      </p>
+    </div>
+  </div>
+  <script src="/js/register.js"></script>
+  <script src="/js/mobile.js"></script>
+</body>
+</html>
